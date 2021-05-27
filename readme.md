@@ -24,10 +24,18 @@ Expected deliveries:
 2. Instructions on how to build and run the application
 
 ## How to build and start the application
-- install java
+- install java, git  
+
+- clone repository  
+    git clonegit@github.com:sadensmol/aikit_interview.git  
+
+- go into the directory  
+    cd aikit_interview  
 
 - on linux/unix run  
     ./mvnw spring-boot:run
 
 - on windows  
-    mvnw.cmd spring-boot:run
+    mvnw.cmd spring-boot:run  
+  
+application will be started at localhost:8080
