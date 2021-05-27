@@ -38,6 +38,14 @@ class CountriesRouteService(private val countriesListWebClient: WebClient) {
         return CountriesRoute(path.toTypedArray())
     }
 
+    /**
+     * simple DFS for path search
+     * time complexity n*m -> n
+     * space complexity n
+     *
+     * where n - number of countries
+     * m - max number of boards in the country
+     */
     private fun findRoute(current: String, destination: String, path: LinkedList<String>): Boolean {
         if (current == destination) return true
 
