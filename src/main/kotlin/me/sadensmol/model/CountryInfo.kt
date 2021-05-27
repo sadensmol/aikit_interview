@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 class CountryInfo (
-    @JsonProperty("cioc")
-    private val id:String,
-    private val borders:Array<String>
+    @JsonProperty("cioc") val id:String,
+    val borders:Array<String>
     )
