@@ -1,36 +1,24 @@
 ## Requirements
 
-Your task is to create a simple Spring Boot service, that is able to calculate any possible land
-route from one country to another. The objective is to take a list of country data in JSON format
-and calculate the route by utilizing individual countries border information.
+Build a HTTP/REST API. You can choose your preferred programming language.
 
-Specifications:  
-● Spring Boot, Maven  
-● Data link: https://raw.githubusercontent.com/mledoze/countries/master/countries.json  
-● The application exposes REST endpoint /routing/{origin}/{destination} that
-returns a list of border crossings to get from origin to destination  
-● Single route is returned if the journey is possible  
-● Algorithm needs to be efficient  
-● If there is no land crossing, the endpoint returns HTTP 400  
-● Countries are identified by cca3 field in country data  
-● HTTP request sample (land route from Czech Republic to Italy):  
-○ GET /routing/CZE/ITA HTTP/1.0 :  
-{  
-"route": ["CZE", "AUT", "ITA"]  
-}  
+The end point has to return the amount of ERC-20 tokens a token holder has. Path params are the erc-20 contract address and the token holder address. Return is the amount of tokens.
 
-Expected deliveries:
-1. Source code
-2. Instructions on how to build and run the application
+API Spec: https://<HOST>/<ERC-20-Address>/<Token-Holder-Address>
+
+Validate results can be done as well with Etherscan
+
+https://etherscan.io/token/0x60eb57d085c59932d5faa6c6026268a4386927d0#balances
+
 
 ## How to build and start the application
 - install java, git  
 
 - clone repository  
-    git clonegit@github.com:sadensmol/aikit_interview.git  
+    git clonegit@github.com:sadensmol/locgame_interview.git  
 
 - go into the directory  
-    cd aikit_interview  
+    cd locgame_interview  
 
 - on linux/unix run  
     ./mvnw spring-boot:run

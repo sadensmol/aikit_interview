@@ -11,9 +11,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <name>aikit_interview</name>
+    <name>locgame_interview</name>
 
-    <artifactId>aikit_interview</artifactId>
+    <artifactId>locgame_interview</artifactId>
     <groupId>me.sadensmol</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -30,6 +30,7 @@
             <assertj-core.version>3.16.0</assertj-core.version>
             <junit.platform.version>1.6.2</junit.platform.version>
             <kotlin-retry.version>1.0.8</kotlin-retry.version>
+            <web3j.version>4.5.0</web3j.version>
         </properties>
 
     <repositories>
@@ -79,6 +80,13 @@
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.web3j</groupId>
+            <artifactId>core</artifactId>
+            <version>${web3j.version}</version>
+        </dependency>
+
 
 
         <!-- Kotlin -->
@@ -187,6 +195,12 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
+                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>test-compile</id>
@@ -194,6 +208,13 @@
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
+                                <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                            </sourceDirs>
+                        </configuration>
+
                     </execution>
                 </executions>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -241,6 +262,9 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+
+
+
         </plugins>
     </build>
 
