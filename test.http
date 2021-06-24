@@ -1,1 +1,35 @@
-# call infura contract
+GET localhost:8080/photos
+
+### get by id
+GET localhost:8080/photos/1121212
+
+### get title by id
+GET localhost:8080/photos/1121212/title
+
+### create new photo
+POST localhost:8080/photo
+Content-Type: application/json
+
+{
+    "albumId": 1,
+    "id": 1121212,
+    "title": "new photo",
+    "url": "https://via.placeholder.com/600/new photo",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796"
+  }
+
+
+### update existing photo
+PUT localhost:8080/photo
+Content-Type: application/json
+
+{
+    "albumId": 1,
+    "id": 1121212,
+    "title": "new photo title after the change",
+    "url": "https://via.placeholder.com/600/new photo",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796"
+  }
+
+###
+DELETE  localhost:8080/photos/1121212

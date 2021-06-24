@@ -11,9 +11,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <name>locgame_interview</name>
+    <name>locgame_interview2</name>
 
-    <artifactId>locgame_interview</artifactId>
+    <artifactId>locgame_interview2</artifactId>
     <groupId>me.sadensmol</groupId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -25,7 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
             <kotlin.version>1.4.30</kotlin.version>
-            <java.version>13</java.version>
+            <java.version>11</java.version>
             <mockk.version>1.9.3</mockk.version>
             <assertj-core.version>3.16.0</assertj-core.version>
             <junit.platform.version>1.6.2</junit.platform.version>
@@ -177,8 +177,6 @@
     </dependencies>
 
     <build>
-        <sourceDirectory>src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
